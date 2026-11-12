@@ -1,0 +1,1781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description" content="Carlito Jamora — Professional Graphic Designer specializing in digital design, branding, printing and sublimation artwork.">
+ 
+
+ <title>Carlito_Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+
+body {
+    background-color: #000;
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.35),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #f5f5f5;
+    font-family: "DM Sans", sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    width: min(92%, 1180px);
+    margin: auto;
+}
+
+section {
+    padding: 120px 0;
+}
+
+.eyebrow,
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 11px;
+    color: #777;
+}
+
+.section-label {
+    margin-bottom: 18px;
+}
+
+.section-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: .9;
+    letter-spacing: -5px;
+    margin-bottom: 28px;
+}
+
+.section-copy {
+    color: #999;
+    max-width: 650px;
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+header {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(8,8,8,.72);
+    backdrop-filter: blur(18px);
+
+    border-bottom: 1px solid rgba(255,255,255,.11);
+}
+
+nav {
+    height: 76px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #666;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #999;
+    font-size: 13px;
+    transition: .25s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+}
+
+.menu {
+    display: none;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 90px;
+
+    position: relative;
+
+    background:
+        radial-gradient(
+            circle at 75% 50%,
+            rgba(255,255,255,.05),
+            transparent 35%
+        );
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.hero h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(64px, 9.5vw, 145px);
+
+    line-height: .82;
+
+    letter-spacing: -9px;
+
+    margin: 25px 0 35px;
+}
+
+.hero h1 .muted {
+    color: #555;
+}
+
+.hero-description {
+    max-width: 600px;
+
+    color: #999;
+
+    font-size: 18px;
+
+    margin-bottom: 32px;
+}
+
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 14px 23px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(255,255,255,.11);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn.primary {
+    background: #fff;
+    color: #000;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    border-color: #555;
+}
+
+.hero-photo {
+    height: 620px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.11);
+
+    position: relative;
+
+    background: #111;
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.45);
+}
+
+.hero-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    display: block;
+
+    filter: saturate(.9);
+}
+
+.hero-photo::after {
+   
+
+    position: absolute;
+
+    bottom: 20px;
+    left: 22px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #fff;
+
+    background: rgba(0,0,0,.45);
+
+    padding: 9px 12px;
+
+    border-radius: 30px;
+
+    backdrop-filter: blur(8px);
+}
+
+.scroll-note {
+    position: absolute;
+
+    bottom: 28px;
+    left: 4%;
+
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    background: #0b0b0b;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: .75fr 1.25fr;
+
+    gap: 85px;
+
+    align-items: center;
+}
+
+.about-photo {
+    height: 570px;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.11);
+
+    box-shadow:
+        0 25px 80px rgba(0,0,0,.45);
+
+    transition: .4s;
+}
+
+.about-photo:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(255,255,255,.3);
+}
+
+.about-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    display: block;
+}
+
+.about-highlight {
+    font-size: 29px;
+
+    line-height: 1.35;
+
+    margin: 25px 0;
+}
+
+.about-highlight span {
+    color: #777;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-grid {
+    margin-top: 55px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 16px;
+}
+
+.card {
+    background: #101010;
+
+    border: 1px solid rgba(255,255,255,.11);
+
+    border-radius: 22px;
+
+    padding: 32px;
+
+    min-height: 300px;
+
+    transition: .35s;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    background: #151515;
+
+    border-color: #444;
+}
+
+.card-num {
+    color: #555;
+
+    font-size: 12px;
+}
+
+.card h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 27px;
+
+    font-weight: 600;
+
+    margin: 50px 0 12px;
+}
+
+.card p {
+    color: #888;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.work-head {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    align-items: end;
+}
+
+.work-grid {
+    margin-top: 55px;
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 18px;
+}
+
+.work-card {
+    border: 1px solid rgba(255,255,255,.11);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    background: #101010;
+}
+
+.work-image {
+    height: 420px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        radial-gradient(
+            circle at 70% 30%,
+            #333,
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #242424,
+            #0d0d0d
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition: .5s;
+}
+
+.work-image::before {
+    content: "";
+
+    width: 190px;
+    height: 190px;
+
+    border: 1px solid #555;
+
+    border-radius: 50%;
+
+    transition: .6s;
+}
+
+.work-card:hover .work-image {
+    transform: scale(1.02);
+
+    filter: brightness(1.08);
+}
+
+.work-card:hover .work-image::before {
+    transform: scale(2.2);
+}
+
+.work-tag {
+    position: absolute;
+
+    left: 22px;
+    top: 22px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+}
+
+.work-info {
+    padding: 23px;
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.work-info h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 20px;
+
+    font-weight: 500;
+}
+
+.work-info p {
+    font-size: 12px;
+
+    color: #666;
+
+    margin-top: 4px;
+}
+
+.arrow {
+    font-size: 24px;
+
+    color: #777;
+}
+
+
+/* =========================================================
+   EXPERIENCE
+========================================================= */
+
+.experience {
+    background: #0b0b0b;
+}
+
+.timeline {
+    margin-top: 55px;
+
+    border-top: 1px solid rgba(255,255,255,.11);
+}
+
+.timeline-item {
+    display: grid;
+
+    grid-template-columns: 180px 1fr;
+
+    gap: 35px;
+
+    padding: 34px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.11);
+}
+
+.timeline-date {
+    color: #666;
+
+    font-size: 13px;
+}
+
+.timeline h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 500;
+
+    margin-bottom: 5px;
+}
+
+.company {
+    color: #777;
+
+    font-size: 13px;
+
+    margin-bottom: 13px;
+}
+
+.timeline p {
+    color: #999;
+
+    max-width: 720px;
+}
+
+
+/* =========================================================
+   SKILLS
+========================================================= */
+
+.skills {
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 12px;
+
+    margin-top: 50px;
+}
+
+.skill {
+    padding: 20px 0;
+
+    border-bottom: 1px solid rgba(255,255,255,.11);
+
+    display: flex;
+
+    justify-content: space-between;
+}
+
+.skill small {
+    color: #666;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    text-align: center;
+}
+
+.contact .section-copy {
+    margin: auto;
+}
+
+.contact-link {
+    display: inline-block;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(24px,5vw,62px);
+
+    font-weight: 500;
+
+    letter-spacing: -2px;
+
+    margin: 45px 0 30px;
+
+    border-bottom: 1px solid #555;
+
+    transition: .3s;
+}
+
+.contact-link:hover {
+    color: #aaa;
+
+    border-color: #fff;
+}
+
+.socials {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+}
+
+.socials a {
+    color: #777;
+
+    font-size: 13px;
+}
+
+.socials a:hover {
+    color: #fff;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    border-top: 1px solid rgba(255,255,255,.11);
+
+    padding: 28px 0;
+
+    color: #555;
+
+    font-size: 12px;
+}
+
+.footer-flex {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+
+/* =========================================================
+   ANIMATION
+========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(30px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:900px) {
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        left: 0;
+        right: 0;
+
+        top: 76px;
+
+        background: #090909;
+
+        padding: 24px;
+
+        flex-direction: column;
+
+        border-bottom: 1px solid rgba(255,255,255,.11);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .hero-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        letter-spacing: -5px;
+    }
+
+    .hero-photo {
+        height: 520px;
+    }
+
+    .services-grid,
+    .work-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .work-head {
+        display: block;
+    }
+
+    .timeline-item {
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+    }
+
+    .skills {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:520px) {
+
+    section {
+        padding: 85px 0;
+    }
+
+    .hero-photo {
+        height: 430px;
+    }
+
+    .about-photo {
+        height: 450px;
+    }
+
+    .work-image {
+        height: 300px;
+    }
+
+}
+
+
+/* PORTFOLIO IMAGE SIZE — compact gallery */
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+}
+
+.section-number {
+    color: #777;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.section-text {
+    color: #999;
+    max-width: 360px;
+    font-size: 14px;
+}
+
+.portfolio-grid {
+    margin-top: 38px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.project {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,.11);
+    border-radius: 16px;
+    background: #101010;
+}
+
+.project-image {
+    height: 230px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #151515;
+}
+
+.project-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.project-info {
+    padding: 15px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.project-title {
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.project-category {
+    color: #777;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+.project-arrow {
+    color: #777;
+    font-size: 20px;
+}
+
+@media (max-width: 900px) {
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .project-image {
+        height: 210px;
+    }
+}
+
+@media (max-width: 520px) {
+    .portfolio-header {
+        display: block;
+    }
+    .portfolio-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+    .project-image {
+        height: 150px;
+    }
+    .project-info {
+        padding: 11px;
+    }
+    .project-title {
+        font-size: 13px;
+    }
+    .project-category {
+        font-size: 10px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     NAVIGATION
+===================================================== -->
+
+<header>
+
+<nav class="container">
+
+<a class="logo" href="#home">
+CARLITO<span>.</span>
+</a>
+
+<button
+class="menu"
+aria-label="Open menu"
+onclick="toggleMenu()">
+☰
+</button>
+
+<ul class="nav-links" id="navLinks">
+
+<li>
+<a href="#home">Home</a>
+</li>
+
+<li>
+<a href="#about">About</a>
+</li>
+
+<li>
+<a href="#services">Services</a>
+</li>
+
+<li>
+<a href="#work">Work</a>
+</li>
+
+<li>
+<a href="#experience">Experience</a>
+</li>
+
+<li>
+<a href="#contact">Contact</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+<main>
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+<div class="container hero-grid">
+
+
+<div class="reveal">
+
+<div class="eyebrow">
+Graphic Designer · Creative Professional
+</div>
+
+
+<h1>
+
+I DESIGN
+
+<br>
+
+IDEAS INTO
+</span>
+
+<br>
+
+IMPACT.
+
+</h1>
+
+
+<p class="hero-description">
+
+I'm Carlito Jamora, a creative Graphic Designer with
+15+ years of experience in digital design, branding,
+printing, and sublimation artwork.
+
+</p>
+
+
+<div class="actions">
+
+<a
+class="btn primary"
+href="#work">
+
+Explore My Work →
+
+</a>
+
+
+<a
+class="btn"
+href="#contact">
+
+Let's Work Together
+
+</a>
+
+</div>
+
+</div>
+
+
+<div class="scroll-note">
+Scroll to explore ↓
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section
+class="about"
+id="about">
+
+<div
+class="container about-grid reveal">
+
+
+<div class="about-photo">
+
+<img src="me.png" alt=""
+alt="Carlito Jamora - Graphic Designer">
+
+</div>
+
+
+<div>
+
+<div class="section-label">
+About Me
+</div>
+
+
+<h2 class="section-title">
+
+CREATIVE
+<br>
+MIND.
+
+</h2>
+
+
+<p class="about-highlight">
+
+Creative designer with
+<span>15+ years of experience</span>
+turning ideas into professional
+visual solutions.
+
+</p>
+
+
+<p class="section-copy">
+
+I specialize in digital design,
+branding, printing, and sublimation artwork.
+I have a strong eye for detail and focus on
+producing creative, accurate, and
+professional-quality work.
+
+</p>
+
+
+<br>
+
+
+<p class="section-copy">
+
+I am reliable, self-motivated, and comfortable
+working independently while meeting deadlines
+in a remote work environment.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section id="services">
+
+<div class="container reveal">
+
+
+<div class="section-label">
+    What I Do
+</div>
+
+
+<h2 class="section-title">
+SERVICES
+</h2>
+
+
+<p class="section-copy">
+
+Creative solutions designed to help businesses,
+brands, and individuals communicate their ideas
+with clarity and impact.
+
+</p>
+
+
+<div class="services-grid">
+
+
+<article class="card">
+
+<div class="card-num">
+01
+</div>
+
+<div>
+
+<h3>
+Graphic Design
+</h3>
+
+<p>
+
+Professional graphics, layouts,
+promotional materials, and visual
+content for print and digital platforms.
+
+</p>
+
+</div>
+
+</article>
+
+
+
+<article class="card">
+
+<div class="card-num">
+02
+</div>
+
+<div>
+
+<h3>
+Branding
+</h3>
+
+<p>
+
+Creative visual identity solutions
+that help businesses establish a
+professional and memorable presence.
+
+</p>
+
+</div>
+
+</article>
+
+
+
+<article class="card">
+
+<div class="card-num">
+03
+</div>
+
+<div>
+
+<h3>
+Ready to Print files
+</h3>
+
+<p>
+
+Professional, high-quality design files prepared for printing.
+All layouts, colors, images, and text are properly arranged
+to ensure a clean and accurate print output.
+</p>
+
+</div>
+
+</article>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PORTFOLIO
+====================================================== -->
+
+<section id="work">
+
+<div class="container reveal">
+
+<div class="portfolio-header">
+
+<div>
+
+<div class="section-number">
+03 — Selected Work
+</div>
+
+<h2 class="section-title">
+PORTFOLIO
+</h2>
+
+</div>
+
+<style>
+    div {
+        display: normal;
+        justify-content: normal;
+        align-items: normal;
+        flex-wrap: wrap;
+    }
+    div img {
+        width: 350px;
+        height: 500px;
+        border: 2px solid #B3B3B3;
+        border-radius: 13px;
+        box-shadow: 4px 7px 0px 0000042;
+        cursor: pointer;
+        margin: 10px;
+        transition: 400ms;
+    }
+    div  img:hover {
+        filter: grayscale(1);
+        transform: scale(1.03);
+    }
+</style>
+</div>
+    <img src="project 01.jpg" alt="">
+    <img src="project 02.jpg" alt="">
+    <img src="project 04.jpg" alt="">
+
+</p>
+
+
+<br>
+
+
+<p class="section-text">
+    Selected examples of creative work.
+    Replace the placeholders below with
+    your actual projects and designs.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+====================================================== -->
+
+<section class="experience" id="experience">
+
+<div class="container reveal">
+
+<div class="section-number">
+04 — Experience
+</div>
+
+<h2 class="section-title">
+EXPERIENCE
+</h2>
+
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+2024 — 2025
+</div>
+
+<div>
+
+<h3>
+Graphic Artist / Printing Machine Operator
+</h3>
+
+<div class="timeline-company">
+DHINS PRINTWORKZ GARMENTS MANUFACTURING
+</div>
+
+<p>
+Communicated directly with clients to understand
+their ideas, provide design recommendations,
+and deliver solutions that matched their
+expectations.
+</p>
+
+<br>
+
+<p>
+Delivered reliable customer-focused service
+while balancing creativity, quality, accuracy,
+and deadlines.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-date">
+15+ YEARS
+</div>
+
+<div>
+
+<h3>
+Graphic Design Experience
+</h3>
+
+<div class="timeline-company">
+Digital Design · Branding · Printing · Sublimation
+</div>
+
+<p>
+Experienced in creating professional-quality
+visual materials with a strong focus on
+detail, creativity, and reliable output.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SKILLS
+====================================================== -->
+
+<section>
+
+<div class="container reveal">
+
+<div class="section-number">
+05 — Skills & Tools
+</div>
+
+<h2 class="section-title">
+MY TOOLKIT
+</h2>
+
+<p class="section-text">
+A combination of creative design skills,
+digital tools, communication platforms,
+and productivity software.
+</p>
+
+
+<div class="skills-grid">
+
+<div class="skill">
+<span>CorelDRAW</span>
+<span>Design</span>
+</div>
+
+<div class="skill">
+<span>Photoshop</span>
+<span>Design</span>
+</div>
+
+<div class="skill">
+<span>Claude / ChatGPT</span>
+<span>AI Tools</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- =====================================================
+     EXPERIENCE
+===================================================== -->
+
+<section
+class="experience"
+id="experience">
+
+<div class="container reveal">
+
+
+<div class="section-label">
+
+</div>
+
+
+<h2 class="section-title">
+EXPERIENCE
+</h2>
+
+
+<div class="timeline">
+
+
+<div class="timeline-item">
+
+
+<div class="timeline-date">
+2024 — 2025
+</div>
+
+
+<div>
+
+<h3>
+Graphic Artist / Printing Machine Operator
+</h3>
+
+
+<div class="company">
+
+DHINS PRINTWORKZ
+GARMENTS MANUFACTURING
+
+</div>
+
+
+<p>
+
+Communicated directly with clients
+to understand their ideas, provide
+design recommendations, and deliver
+solutions that matched their expectations.
+
+</p>
+
+
+<br>
+
+
+<p>
+
+Delivered reliable customer-focused
+service while balancing creativity,
+quality, accuracy, and deadlines.
+
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="timeline-item">
+
+
+<div class="timeline-date">
+15+ YEARS
+</div>
+
+
+<div>
+
+<h3>
+Graphic Design Experience
+</h3>
+
+
+<div class="company">
+
+Digital Design · Branding · Ready to Print · Sublimation
+
+</div>
+
+
+<p>
+
+Experienced in creating professional-quality
+visual materials with a strong focus on
+detail, creativity, and reliable output.
+
+</p>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =====================================================
+     CONTACT
+===================================================== -->
+
+<section
+class="contact"
+id="contact">
+
+<div class="container reveal">
+
+
+<div class="section-label">
+Let's Work Together
+</div>
+
+
+<h2 class="section-title">
+
+HAVE A
+<br>
+PROJECT?
+
+</h2>
+
+
+<p class="section-copy">
+
+Have a design project, branding idea,
+printing requirement, or creative task?
+
+Let's talk.
+
+</p>
+
+
+<a
+class="contact-link"
+href="https://www.facebook.com/jhaykulot83"
+target="_blank"
+rel="noopener">
+
+Message Me →
+
+</a>
+
+
+<div class="socials">
+
+<a
+href="https://www.facebook.com/jhaykulot83"
+target="_blank"
+rel="noopener">
+
+Facebook
+
+</a>
+
+
+<a href="#work">
+Portfolio
+</a>
+
+
+<a href="tel:09058265674">
+09058265674
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+<div class="container footer-flex">
+
+<div>
+© 2026 Carlito Jamora. All Rights Reserved.
+</div>
+
+
+<div>
+Graphic Designer · Creative Professional
+</div>
+
+</div>
+
+</footer>
+
+
+
+<script>
+
+/* MOBILE MENU */
+
+function toggleMenu() {
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("open");
+
+}
+
+
+/* CLOSE MOBILE MENU */
+
+document
+.querySelectorAll(".nav-links a")
+.forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        document
+        .getElementById("navLinks")
+        .classList.remove("open");
+
+    });
+
+});
+
+
+/* SCROLL ANIMATION */
+
+const observer =
+new IntersectionObserver(
+
+entries => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+            observer.unobserve(entry.target);
+
+        }
+
+    });
+
+},
+
+{
+    threshold: 0.12
+}
+
+);
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(element => {
+
+    observer.observe(element);
+
+});
+
+</script>
+
+
+</body>
+</html>
